@@ -90,8 +90,6 @@ namespace API.Controllers
                 }
             }
         }
-
-
         
         private string GetResultOperation(int n){
             var numbers = GenerateList(n);
@@ -101,26 +99,8 @@ namespace API.Controllers
                 numbers = GenerateList(n);
             }
             Console.WriteLine($"La operación {result} da un resultado válido");
-            return result;
-          /* int[] list = GenerateList(n).ToArray();
-           bool success = FindCombination(list);
-
-            while (!success)
-            {
-                Console.WriteLine("No combination found, generating new list...");
-                list = GenerateList(n).ToArray();
-                success = FindCombination(list);
-                if (!success)
-                {
-                    Console.WriteLine("No combination found");
-                }
-            }
-
-
-            return _resultOperation;*/
+            return result;        
         }
-        
-            
         
     }
 }
