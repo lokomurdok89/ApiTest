@@ -36,7 +36,7 @@ contains "N" space-separated integers "a1,a2,...,aN" dneoting the elements of th
 3
 22 79 21
 ```
-## :+1: Sample Input 0
+## :+1: Sample Otput 0
 ```javascript
 22*79-21
 Solution 1: 22 x 79 -21 = 1717 / 101 = 17, where , so it is perfectly divisible by 101.
