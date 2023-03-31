@@ -1,65 +1,44 @@
-# :first_quarter_moon: Visual Studio Code con distintos lenguajes y extensiones NET 7 y REACT
+# :first_quarter_moon: Arithmetic Expressions in NET 7
 
 ## :octocat: Explicación de intención del proyecto
 
 [Lokomurdok89 en Github](https://github.com/okomurdok89)
 
-Este proyecto es una aplicación web que muestra una funcionalidad básica de una aplicación CRUD (Create, Read, Update, Delete). El objetivo principal de la aplicación es permitir a los usuarios crear, leer, actualizar y eliminar elementos de una lista.
+5-year-old Shinchan had just started learning mathematics. Meanwhile, one of his studious classmates,
+Kazama, had already written a basic calculator which supports only three operations on integers:
+multiplication , addition , and subtraction . Since he had just learned about these operations,
+he didn't know about operator precedence, and so, in his calculator, all operators had the same
+precedence and were left-associative.
+As always, Shinchan started to irritate him with his silly questions. He gave Kazama a list of integers
+and asked him to insert one of the above operators between each pair of consecutive integers such that
+the result obtained after feeding the resulting expression in Kazama's calculator is divisible by 101. At his
+core, Shinchan is actually a good guy, so he only gave lists of integers for which an answer exists.
+Can you help Kazama create the required expression? If multiple solutions exist, print any one of them.
 
-La interfaz de usuario es sencilla y fácil de usar, lo que permite a los usuarios interactuar con la aplicación de manera intuitiva. La lista se muestra en una tabla, donde cada elemento tiene su propio conjunto de botones de acción para editar o eliminar.
+## :metal: Input Format
 
-La aplicación está construida con tecnologías web modernas, incluyendo React, CSS, HTML, CSS y JavaScript en el frontend, y un servidor backend programado en un lenguaje de programación en este caso NET 7. El servidor utiliza una base de datos local para almacenar los elementos de la lista y para el manejo de estas utiliza EntityFramework.
+The first line contains a single integer "N" denoting the number of elements in the list. The second line
+contains "N" space-separated integers "a1,a2,...,aN" dneoting the elements of the list.
 
-El proyecto es útil como ejemplo básico de una aplicación CRUD, y puede ser utilizado como punto de partida para desarrollar aplicaciones más complejas en el futuro. Además, el código fuente está disponible para su descarga y modificación, lo que permite a los desarrolladores personalizar la aplicación para sus propias necesidades.
+### :rocket: Constraint
 
-## :metal: Características principales Front
+* [X] 2 < N <= 10^4  
+* [X] 1 <= ai <= 100 
+* [X] The length of the output expression should not exceed 10n
 
-Permite crear, leer, actualizar y eliminar elementos de una lista
-Permite Exportar todo a Excel.
-Desarrollado EN REACT y Semantic-ui
+## :sparkles: Output Format
+* [X] You are not allowed to permute the list.
+* [X] All operators have the same precedence and are left-associative, e.g.,  a + b x -d x e is interpreted as (((( a + b) x c) -d) x e)
+* [X] Unary plus and minus are not supported, e.g., statements like ,-a,a X -b ,-a x b +c or are invalid.
 
-### :rocket: Características principales Back End
-
-Permite Guardar todas las transacciones realizadas en la API
-Permite Manejar todo tipo de Excepciones
-Arquitectura CQRS
-Bases de datos local expandible a cualquier otra BD
-
-## :sparkles: Programas Necesarios
-Visual Studio Code.
-NET 7
-Node.Js
-
-## :+1:  Librerias BACK 
-
-* [X] Karambolo.Extensions.Logging.File  
-* [X] Karambolo.Extensions.Logging.File.Json  
-* [X] Microsoft.AspNetCore.OpenApi  
-* [X] Microsoft.EntityFrameworkCore.Design
-* [X] Microsoft.Extensions.FileProviders.Physical
-* [X] Microsoft.Extensions.Logging
-* [X] Microsoft.Extensions.Logging.Configuration
-* [X] Microsoft.Extensions.Options.ConfigurationExtensions
-* [X] Newtonsoft.Json
-* [X] Serilog.AspNetCore
-* [X] Swashbuckle.AspNetCore
-* [X] AutoMapper.Extensions.Microsoft.DependencyInjection
-* [X] MediatR.Extensions.Microsoft.DependencyInjection
-* [X] Microsoft.EntityFrameworkCore.Sqlite
-## :+1:  Librerias Front
-
-* [X] axios
-* [X] file-saver
-* [X] semantic-ui
-* [X] uuid
-* [X] xlsx-styl
-
-
-### :rocket: Para Levantar y Ejecutar la aplicación.
-
-
-
-Back | Front
--------|------
-Proyecto API | proyeco client-app
-dotnet run |  npm start
+## :+1: Sample Input 0
+```javascript
+3
+22 79 21
+```
+## :+1: Sample Input 0
+```javascript
+22*79-21
+Solution 1: 22 x 79 -21 = 1717 / 101 = 17, where , so it is perfectly divisible by 101.
+Solution 2: 22 + 79 x 21 = 2121 which is also divisible by 101.
+```
