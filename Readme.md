@@ -1,4 +1,4 @@
-# :first_quarter_moon: Arithmetic Expressions in NET 7
+# :first_quarter_moon: Arithmetic Expressions in NET 7 In VSCode
 
 ## :octocat: Explicación de intención del proyecto
 
